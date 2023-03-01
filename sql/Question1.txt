@@ -1,9 +1,8 @@
-// Creating a database name as Employee (Done in the Oracle SQL)
+//1. Creating a database name as Employee (Done in the Oracle SQL)
 
 create user Employee identified by 1234;
 
-------------------------------------------------------------------------------------------------------------
-//Creating a table 
+//2.Creating a table 
 
 grant create session to Employee;
 grant create table to Employee;
@@ -19,9 +18,8 @@ create table Employee_Details
   	Salary integer,
   	Dep_id integer
  );
--------------------------------------------------------------------------------------------------------------
 
-// Inserting values into the table
+// 3.Inserting values into the table
 
 insert into Employee_Details values(68319,'Mr.Singh','President',68319,'19-nov-1991',600001001);
 insert into Employee_Details values(68320,'Mr.Rao','Vice President',68320','20-jan-1991',550001001);
@@ -33,22 +31,21 @@ insert into Employee_Details values(68325,'Mr.Chran','Designer',68325,'31-mar-20
 insert into Employee_Details values(68326,'Mr.Ram','Accountant',68326,'31-jan-2004',75000,1004);
 insert into Employee_Details values(68327,'Mr.Raj','Accountant',68327,'18-mar-2004',80000,1004);
 insert into Employee_Details values(68328,'Mr.Vijay','Accountant',68328,'31-jan-2005',60000,1004);
---------------------------------------------------------------------------------------------------------------
 
-// Finding Salaries of all the Employees
+
+// 4.Finding Salaries of all the Employees
 
 select Emp_name,Salary from Employee_Details;
---------------------------------------------------------------------------------------------------------------
 
-// Finding the unique designations of employees from the Table
+
+// 5.Finding the unique designations of employees from the Table
 
 select distinct Job_name from Employee_Details;
 			(or)
 select unique Job_name from Employee_Details;
 	
----------------------------------------------------------------------------------------------------------------
 
-// updating salary of the employee name Mr.Raj
+// 6.updating salary of the employee name Mr.Raj
 
 update Employee_Details set Salary=85000 where Emp_name='Mr.Raj';
----------------------------------------------------------------------------------------------------------------
+
