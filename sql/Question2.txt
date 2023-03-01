@@ -1,0 +1,48 @@
+// creating a datbase name as Football done (Done in the Oracle SQL)
+
+1. create user Football identified by 1234;
+--------------------------------------------------------------------------------------------------------
+// Creating a Table
+
+2. grant create session to Football;
+   grant create table to Football;
+   grant unlimited tablespace to Football;
+   connect Football/1234;
+
+   create table Football_Venue
+   (
+    venue_id integer,
+    venue_name varchar2(20),
+    city_id integer,
+    capacity integer
+   );
+--------------------------------------------------------------------------------------------------------
+
+// Inserting values into the Football_Venue Table
+
+3. insert into Football_Venue values(20001,'France',10003,42115);
+   insert into Football_Venue values(20002,'Argentina',10004,42955);
+   insert into Football_Venue values(20003,'Spain',10005,46955);
+   insert into Football_Venue values(20004,'Portugal',10006,48925);
+   insert into Football_Venue values(20005,'Germany',10007,58928);
+   insert into Football_Venue values(20006,'India',10008,38958);
+   insert into Football_Venue values(20007,'Australia',10009,55958);
+   insert into Football_Venue values(20008,'UAE',10010,25858);
+   insert into Football_Venue values(20009,'China',10011,45858);
+   insert into Football_Venue values(20010,'England',10012,65858);
+---------------------------------------------------------------------------------------------------------
+
+//Counting all venue_names from table
+ 
+4. select count(*) as venues_count from Football_Venue;
+---------------------------------------------------------------------------------------------------------
+
+//Displaying all the venue_names and capacity as Location and Volume
+
+5. select venue_name as Location,capacity as Volume from Football_Venue;
+----------------------------------------------------------------------------------------------------------
+
+// Deleting all the rows from the table where  venue_name is Australia
+
+6. delete from Football_Venue where venue_name='Australia';
+----------------------------------------------------------------------------------------------------------
