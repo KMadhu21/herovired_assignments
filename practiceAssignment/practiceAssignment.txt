@@ -1,0 +1,74 @@
+// Query-1. Write an SQL query to fetch “FIRST_NAME” from the Worker table using the alias name <WORKER_NAME>.
+
+  query: select First_Name as Worker_Name from Worker;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-2. Write an SQL query to find the position of the alphabet (‘a’) in the first name column ‘Amitabh’ from the Worker table.
+
+  query: select position('a' IN First_Name) from Worker where First_Name = 'Amitabh';
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-3. Write an SQL query to print the FIRST_NAME from the Worker table after replacing ‘a’ with ‘A’.
+
+  query: select replace(First_Name,'a','A') from Worker;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-4. Write an SQL query to print all Worker details from the Worker table order by FIRST_NAME Ascending.
+
+  query: select * from Worker order by First_Name asc;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-5. Write an SQL query to print all Worker details from the Worker table order by FIRST_NAME Ascending and DEPARTMENT Descending.
+
+  query: select * from Worker order by First_Name,Department desc;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-6. Write an SQL query to print details for Workers with the first name as “Vipul” and “Satish” from the Worker table.
+
+  query: select * from Worker where First_Name in('Vipul','Satish');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-7. Write an SQL query to print details of Workers with DEPARTMENT name as “Admin”
+
+  query: select * from Worker where Department in('Admin');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-8. Write an SQL query to print details of the Workers whose FIRST_NAME contains ‘a'
+
+  query: select * from Worker where First_name like('a%');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-9. Write an SQL query to print details of the Workers whose SALARY lies between 100000 and 500000.
+
+  query: select * from Worker where Salary between 100000 and 500000;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-10. Write an SQL query to print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets.
+
+  query: select * from Worker where First_Name like('______h');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-11. Write an SQL query to print details of the Workers who have joined in Feb’2014.
+
+  query: select * from Worker where Joining_Date like('%feb-14');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Query-12. Write an SQL query to fetch worker names with salaries >= 50000 and <= 100000.
+
+  query: select * from Worker where Salary>=50000 and Salary<=100000;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Query-13. Write a SQL query to find the salesperson and customer who reside in the same city. Return Salesman, cust_name, and city
+
+  query: select name,cust_name,Salesman.city from Salesman,Customer where Salesman.city=Customer.city;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Query-14. Write a SQL query to find the salesperson(s) and the customer(s) he represents. Return Customer Name, city, Salesman, and commission.
+
+  query: select cust_name,Customer.city,name,commission from Customer,Salesman where Salesman.salesman_id=Customer.salesman_id;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Query-15. Write a SQL query to find salespeople who received commissions of more than 12 percent from the company. Return Customer Name, customer city, Salesman, and commission.
+
+  query: select cust_name,Customer.city,name,commission from Salesman,Customer where commission>.12 and Salesman.salesman_id=Customer.salesman_id;
+
+
+
+
