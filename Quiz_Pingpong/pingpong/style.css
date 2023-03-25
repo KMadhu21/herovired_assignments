@@ -1,0 +1,55 @@
+#gamecontainerdiv {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    border: 5px solid orange;
+    margin-top: 50px;
+}
+
+#padleft,
+#padright {
+    position: absolute;
+    width: 10px;
+    height: 80px;
+    background-color: green;
+}
+
+#padleft {
+    left: 20px;
+    top: 150px;
+}
+
+#padright {
+    right: 20px;
+    top: 150px;
+}
+
+#ball {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    left: 290px;
+    top: 190px;
+}
+
+#scoreleft,
+#scoreright {
+    position: absolute;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#scoreleft {
+    left: 200px;
+    top: 20px;
+    color: blue;
+}
+
+#scoreright {
+    right: 200px;
+    top: 20px;
+    color: blue;
+}
