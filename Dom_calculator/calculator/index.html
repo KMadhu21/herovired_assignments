@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="Cal.css">
+   <title>Calulator</title>
+</head>
+<body>
+   <div class="maindiv">
+      <input type="text" id = 'res'>
+      <div class="btn">
+         <button onclick = "Clearscreen()">C</button>
+         <button onclick = "Back('←')">←</button>
+         <button onclick = "Solve('%')">%</button>
+         <button onclick = "Solve('/')">/</button>
+         <br>
+         <button onclick = "Solve('7')">7</button>
+         <button onclick = "Solve('8')">8</button>
+         <button onclick = "Solve('9')">9</button>
+         <button onclick = "Solve('*')">x</button>
+         <br>
+         <button onclick = "Solve('4')">4</button>
+         <button onclick = "Solve('5')">5</button>
+         <button onclick = "Solve('6')">6</button>
+         <button onclick = "Solve('-')">-</button>
+         <br>
+         <button onclick = "Solve('1')">1</button>
+         <button onclick = "Solve('2')">2</button>
+         <button onclick = "Solve('3')">3</button>
+         <button onclick = "Solve('+')">+</button>
+         <br>
+         <button onclick = "Solve('00')">00</button>
+         <button onclick = "Solve('0')">0</button>
+         <button onclick = "Solve('.')">.</button>
+         <button onclick = "Result()">=</button>
+      </div>
+   </div>
+   <script src = 'Cal.js' ></script>
+</body>
+</html>
